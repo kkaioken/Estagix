@@ -37,8 +37,8 @@ Para o desenvolvimento do projeto está sendo utilizado o stack VueJS + SpringBo
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/kkaioken">
-        <img src="https://avatars.githubusercontent.com/u/103671003?v=4" width="100px;" alt="tom"/><br>
+      <a href="https://github.com/clevertonx">
+        <img src="https://avatars.githubusercontent.com/u/101062921?v=4" width="100px;" alt="tom"/><br>
         <sub>
           <b>Clevenrton</b>
         </sub>
