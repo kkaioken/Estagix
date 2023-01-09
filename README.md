@@ -1,10 +1,10 @@
 # Estagix
 - Aplicação para reserva de estações de trabalho da sala de desenvolvimento
+## 🎨 Protótipo - FIGMA
+<a href="https://www.figma.com/file/jn3DZsUHkrwTvEf3lX1bev/ESTAGIX?node-id=0%3A1&t=ZNgnSWOPst4cSmGG-0">Protótipo</a>
 
-🎨 https://www.figma.com/file/jn3DZsUHkrwTvEf3lX1bev/ESTAGIX?node-id=0%3A1&t=ZNgnSWOPst4cSmGG-0
-
-📝 https://trello.com/b/qTr3LNph/estagix
-
+## 📝 TRELLO
+<a href="https://trello.com/b/qTr3LNph/estagix">Backlog</a>
 
 ## 🔧 Tecnologias utilizadas 🔧
 Para o desenvolvimento do projeto está sendo utilizado o stack VueJS + SpringBoot + PostgreSQL;
