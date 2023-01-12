@@ -1,21 +1,27 @@
 package br.com.digix.estagix.service;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.Collection;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import br.com.digix.estagix.dto.LocalResponseDTO;
+import br.com.digix.estagix.mappers.LocalMapper;
 import br.com.digix.estagix.model.Local;
 import br.com.digix.estagix.repository.LocalRepository;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@SpringBootTest
 public class LocalServiceTest {
-
     @Autowired
     private LocalRepository localRepository;
+    
+    @Autowired
+    private LocalMapper localMapper;
 
     @Autowired
     private LocalService localService;
@@ -34,9 +40,11 @@ public class LocalServiceTest {
         localRepository.save(local2);
 
         Collection<LocalResponseDTO> locais = localService.buscarTodos();
-
-        assertTrue(locais.contains(local1));
-        assertTrue(locais.contains(local2));
+        
         assertEquals(quantidadeEsperada, locais.size());
+        assertThat(locais).extracting("nome").contains(local1.getNome());
+        assertThat(locais).extracting("nome").contains(local2.getNome());
+        assertThat(locais).extracting("id").contains(local1.getId());
+        assertThat(locais).extracting("id").contains(local2.getId());
     }
 }
