@@ -5,10 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Collection;
 
-import org.apache.tomcat.jni.Local;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import br.com.digix.estagix.model.Local;
 
 @DataJpaTest
 public class LocalRepositoryTest {
@@ -23,7 +24,7 @@ public class LocalRepositoryTest {
 		Local local2 = new Local("auditório");
 		localRepository.save(local2);
     
-		Collection<Local> locaisRetornados = localRepository.findAll();
+		Collection<Local> locaisRetornados = (Collection<Local>) localRepository.findAll();
 
 		assertEquals(quantidadeEsperada,locaisRetornados.size());
 		assertTrue(locaisRetornados.contains(local1));
