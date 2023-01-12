@@ -1,4 +1,4 @@
-package br.com.digix.estagix;
+package br.com.digix.estagix.model;
 
 import br.com.digix.estagix.utils.EntidadeBase;
 import lombok.AllArgsConstructor;

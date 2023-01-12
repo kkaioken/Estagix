@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import br.com.digix.estagix.Local;
-
 public class LocalTest {
     @Test
         void deve_acessar_um_local(){
