@@ -1,16 +1,16 @@
 package br.com.digix.estagix.service;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.Collection;
 
-import javax.validation.constraints.AssertTrue;
-
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import br.com.digix.estagix.dto.LocalRequestDTO;
 import br.com.digix.estagix.dto.LocalResponseDTO;
 import br.com.digix.estagix.model.Local;
+import br.com.digix.estagix.repository.LocalRepository;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LocalServiceTest {
 
@@ -35,8 +35,8 @@ public class LocalServiceTest {
 
         Collection<LocalResponseDTO> locais = localService.buscarTodos();
 
-        AssertTrue(locais.contains(local1));
-        AssertTrue(locais.contains(local2));
+        assertTrue(locais.contains(local1));
+        assertTrue(locais.contains(local2));
         assertEquals(quantidadeEsperada, locais.size());
     }
 }
