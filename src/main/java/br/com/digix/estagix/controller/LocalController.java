@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.digix.estagix.dto.LocalResponseDTO;
-import br.com.digix.estagix.repository.LocalRepository;
 import br.com.digix.estagix.service.LocalService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -23,9 +22,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 public class LocalController {
     @Autowired
     private LocalService localService;
-
-    @Autowired
-    private LocalRepository localRepository;
 
     @Operation(summary = "Buscar todos os locais cadastrados")
     @ApiResponse(responseCode = "200", description = "Lista de locais cadastrados")
