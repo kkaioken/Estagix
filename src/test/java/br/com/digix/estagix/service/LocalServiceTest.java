@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import br.com.digix.estagix.dto.LocalResponseDTO;
-import br.com.digix.estagix.mappers.LocalMapper;
 import br.com.digix.estagix.model.Local;
 import br.com.digix.estagix.repository.LocalRepository;
 
@@ -20,9 +19,6 @@ public class LocalServiceTest {
     @Autowired
     private LocalRepository localRepository;
     
-    @Autowired
-    private LocalMapper localMapper;
-
     @Autowired
     private LocalService localService;
 
